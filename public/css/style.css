@@ -128,14 +128,52 @@ header  {
  }
  /* ===== About-Us End ===== */
  /* ===== Services Start ===== */
+
 .services-item {
     border: 1px solid #f5f5f5;
     background-color: rgba(0,0,0,.5);
     padding: 15px;
     box-shadow: 3px 6px 15px 2px rgba(0,0,0,.3);
+    transition: all ease .5s;
+    height: 100%;
+}
+@keyframes services-item
+{
+    15%
+    {
+        transform: translateX(5px);
+    }
+    30%
+    {
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        transform: translateX(3px);
+    }
+    65%
+    {
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        transform: translateX(2px);
+    }
+    100%
+    {
+        transform: translateX(0);
+    }
+}
+.services-item:hover
+{
+    animation: services-item 1s ease;
+    animation-iteration-count: 1;
 }
  .services .row + .row {
      margin-top: 15px;
+ }
+ .services-item i {
+     font-size: 25px;
  }
  /* ===== Services End ===== */
  /* ===== Portfolio Start ===== */
@@ -149,6 +187,7 @@ header  {
      border: 10px solid #fff;
      padding: 5px;
      perspective: 900px;
+     height: 100%;
  }
 .portfolio-wrap:hover {
     box-shadow: inset 5px 5px 20px 2px rgba(255,255,255, 0.3);
@@ -162,6 +201,7 @@ header  {
      padding: 5px;
      box-shadow: 3px 6px 15px 2px rgba(255,255,255, 0.3);
      transition: all ease .5s;
+     height: 100%;
  }
 .portfolio-item .img-thumbnail {
     filter: grayscale(70%);
@@ -183,9 +223,45 @@ header  {
     padding: 15px;
     box-shadow: 3px 6px 15px 2px rgba(0,0,0,.3);
     color: #fff;
+    height: 100%;
+}
+@keyframes contacts-item
+{
+    15%
+    {
+        transform: translateX(5px);
+    }
+    30%
+    {
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        transform: translateX(3px);
+    }
+    65%
+    {
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        transform: translateX(2px);
+    }
+    100%
+    {
+        transform: translateX(0);
+    }
+}
+.contacts-item:hover
+{
+    animation: contacts-item 1s ease;
+    animation-iteration-count: 1;
 }
 .contacts-item a {
     color: #fff;
+}
+.contacts-item i {
+    font-size: 25px;
 }
  /* ===== Contacts End ===== */
  /* ===== Footer Start ===== */
@@ -203,26 +279,81 @@ header  {
     font-size: 25px;
     cursor: pointer;
 }
+/* Social Icon (inner&footer) */
+.social-icon {
+    transition:all 0.5s ease;
+}
+@keyframes social-icon
+{
+    15%
+    {
+        transform: translateX(2px);
+    }
+    30%
+    {
+        transform: translateX(-2px);
+    }
+    50%
+    {
+        transform: translateX(1px);
+    }
+    65%
+    {
+        transform: translateX(-1px);
+    }
+    80%
+    {
+        transform: translateX(2px);
+    }
+    100%
+    {
+        transform: translateX(0);
+    }
+}
+.social-icon:hover
+{
+    animation: social-icon 1s ease;
+    animation-iteration-count: 1;
+}
 .footer .social-wrap a + a {
     margin-left: 10px;
 }
 .footer .mail, .social .mail {
-    color: #B23121;
+    color: #ff4343;
+}
+.footer .mail:hover, .social .mail:hover {
+    color: #ff5d5d;
+    transform: rotateZ(-30deg);
 }
 .footer .facebook, .social .facebook {
     color: #3b5998;
 }
+.footer .facebook:hover, .social .facebook:hover {
+    color: #8b9dc3;
+}
 .footer .skype, .social .skype {
-    color: #12A5F4
+    color: #00aff0;
+}
+.footer .skype:hover, .social .skype:hover {
+    color: #c7edfc;
 }
 .footer .messenger, .social .messenger {
     color: #0084ff;
 }
+.footer .messenger:hover, .social .messenger:hover {
+    color: #44bec7;
+}
 .footer .viber, .social .viber {
     color: #59267c;
 }
+.footer .viber:hover, .social .viber:hover {
+    color: #e2d4e7;
+}
 .footer .phone, .social .phone {
-    color: #fff;
+    color: #495fa1;
+}
+.footer .phone:hover, .social .phone:hover {
+    color: #838bb0;
 }
 .footer-arrow {
     position: absolute;
