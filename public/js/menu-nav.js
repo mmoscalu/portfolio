@@ -19,4 +19,34 @@ for (let i = 0; i < navItem.length; i++) {
     };
 
 }
+// Scroll menu
+$(document).ready(function(){
+    $("#menu-id").on("click","a", function (event) {
+
+
+        var id  = $(this).attr('href'),
+
+            top = $(id).offset().top;
+
+        $('body,html').animate({scrollTop: (top - 90)}, 3000);
+    });
+
+});
+// Footer menu scroll
+$(document).ready(function(){
+
+    $("#menu-footer").on("click","a", function (event) {
+
+
+        var id  = $(this).attr('href'),
+
+            top = $(id).offset().top;
+
+        $('body,html').animate({scrollTop: (top - 90)}, 3000);
+    });
+
+});
+
+// Scroll top button
+
 
